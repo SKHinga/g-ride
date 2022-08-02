@@ -10,6 +10,7 @@ html {
 
 * {
   font-family: 'Poppins', sans-serif;
+  color: white;
 }
 
 .bike {
@@ -18,9 +19,58 @@ html {
 
 .rotation {
   -webkit-transform: rotate(-40deg);
-  display: inline-block;
 }
 
 .trans {
   transform: translateY(-2px);
+}
+
+.account {
+  transform: translateY(2px);
+}
+
+.ground {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.noun {
+  height: 92%;
+}
+
+.nairobi::after {
+  content: "";
+  display: block;
+  width: 60vw;
+  height: 2px;
+  background: #fff;
+  left: 110%;
+  bottom: 30%;
+  position: absolute;
+}
+
+.material-button {
+  background-color: rgb(67, 56, 202) !important;
+  font-weight: bold !important;
+}
+
+@media (min-width: 768px) {
+  .nairobi {
+    -webkit-transform: rotate(-90deg);
+    
+  }
+
+  .nairobi::after {
+    content: "";
+    display: block;
+    width: 33vw;
+    height: 2px;
+    background: #fff;
+    left: 110%;
+    bottom: 30%;
+    position: absolute;
+  }
+
+  .noun > h2 {
+    margin-right: -60px;
+  }
 }
