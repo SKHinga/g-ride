@@ -8,7 +8,6 @@ function NavBar(over) {
 
   const handleOver = () => {
     setOverlay(over => !over)
-    console.log('overlay');
   }
 
   return (

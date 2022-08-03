@@ -51,6 +51,7 @@ html {
 .material-button {
   background-color: rgb(67, 56, 202) !important;
   font-weight: bold !important;
+  color: white !important;
 }
 
 @media (min-width: 768px) {
