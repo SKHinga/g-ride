@@ -1,7 +1,8 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
-import Login from './Login';
+// import Login from './Login';
+import Signup from './Signup';
 
 export default function Example() {
   const [open, setOpen] = useState(true)
@@ -61,8 +62,8 @@ export default function Example() {
                     <div className="relative mt-6 flex-1 px-4 sm:px-6">
                       {/* Replace with your content */}
                       <div className="absolute inset-0 px-4 sm:px-6">
-                        <div className="h-full border-2 rounded-3xl border-dotted border-gray-200 flex justify-center items-center" aria-hidden="true">
-                          <Login/>
+                        <div className="h-screen md:h-full border-2 rounded-3xl border-dotted border-gray-200 flex justify-center items-center" aria-hidden="true">
+                          <Signup/>
                         </div>
                         
                       </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link} from 'react-router-dom';
 import Button from '@mui/material/Button';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
@@ -16,7 +17,7 @@ function Explore() {
                 <p className='font-bold mt-5 text-base'>Ride your way to a healthy life</p>
               </div>
               <div>
-                <Button variant='contained' className='material-button'>EXPLORE MORE <ArrowForwardIcon/></Button>
+                <Link to='dashboard'><Button variant='contained' className='material-button'>EXPLORE MORE <ArrowForwardIcon/></Button></Link>
               </div>
             </div>
           </div>

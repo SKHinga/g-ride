@@ -54,7 +54,7 @@ html {
   color: white !important;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .nairobi {
     -webkit-transform: rotate(-90deg);
     

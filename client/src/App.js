@@ -1,6 +1,7 @@
 
 import {Helmet} from "react-helmet";
 import { Routes, Route} from "react-router-dom";
+import Dash from "./Components/Dashboard/Dash";
 import Landing from "./Components/Hero/Landing";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       </Helmet>
 
       <Routes>
+        <Route path="dashboard" element={<Dash/>}/>
         <Route index path="/" element={<Landing/>}/>
       </Routes>
     </div>
