@@ -1,10 +1,9 @@
-// import { useState, useEffect } from "react";
+
 import {Helmet} from "react-helmet";
 import { Routes, Route} from "react-router-dom";
 import Landing from "./Components/Hero/Landing";
 
 function App() {
-
 
   return (
     <div>
