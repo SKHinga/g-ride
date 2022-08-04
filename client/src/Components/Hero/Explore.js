@@ -5,7 +5,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 function Explore() {
   return (
-    <div className='grid grid-cols-10 md:grid-cols-12 noun px-3'>
+    <div className='grid grid-cols-10 md:grid-cols-12 nana px-3'>
       <div className='hidden md:contents'><div></div></div>
       <div className='col-span-10 w-full flex flex-col md:flex-row justify-between'>
           <div className='w-full h-full flex items-center md:w-3/5'>
