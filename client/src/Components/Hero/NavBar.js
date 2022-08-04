@@ -4,10 +4,10 @@ import { Riders } from '../Helper/Context';
 
 function NavBar(over) {
 
-  const {setOverlay} = useContext(Riders)
+  const {setOverlay, overlay} = useContext(Riders)
 
   const handleOver = () => {
-    setOverlay(over => !over)
+    setOverlay(!overlay)
   }
 
   return (

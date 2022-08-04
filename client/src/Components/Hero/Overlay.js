@@ -1,15 +1,12 @@
-import { Fragment, useState } from 'react'
+import { Fragment} from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
-// import Login from './Login';
-import Signup from './Signup';
 
-export default function Example() {
-  const [open, setOpen] = useState(true)
+export default function Overlay({head, children, see, setSee}) {
 
   return (
-    <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={setOpen}>
+    <Transition.Root show={see} as={Fragment}>
+      <Dialog as="div" className="relative z-10" onClose={setSee}>
         <Transition.Child
           as={Fragment}
           enter="ease-in-out duration-500"
@@ -48,7 +45,7 @@ export default function Example() {
                       <button
                         type="button"
                         className="rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
-                        onClick={() => setOpen(false)}
+                        onClick={() => setSee(false)}
                       >
                         <span className="sr-only">Close panel</span>
                         <XIcon className="h-6 w-6" aria-hidden="true" />
@@ -57,15 +54,12 @@ export default function Example() {
                   </Transition.Child>
                   <div className="flex h-full flex-col overflow-y-scroll bg-black py-6 shadow-xl">
                     <div className="px-4 sm:px-6">
-                      <Dialog.Title className="text-lg font-medium text-white"> Log In </Dialog.Title>
+                      <Dialog.Title className="text-lg font-medium text-white"> {head} </Dialog.Title>
                     </div>
                     <div className="relative mt-6 flex-1 px-4 sm:px-6">
                       {/* Replace with your content */}
-                      <div className="absolute inset-0 px-4 sm:px-6">
-                        <div className="h-screen md:h-full border-2 rounded-3xl border-dotted border-gray-200 flex justify-center items-center" aria-hidden="true">
-                          <Signup/>
-                        </div>
-                        
+                      <div className="absolute inset-0 px-4 sm:px-6"> 
+                          {children}                    
                       </div>
                       {/* /End replace */}
                     </div>

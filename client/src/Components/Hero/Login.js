@@ -1,9 +1,17 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import Button from '@mui/material/Button';
+import { Riders } from '../Helper/Context';
 
 function Login() {
 
   const [loading, setLoading] = useState(false);
+  const {setSign, sign, overlay, setOverlay} = useContext(Riders)
+
+  const handleDisplay = () => {
+    setSign(!sign);
+    setOverlay(!overlay);
+  }
+ 
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -12,7 +20,7 @@ function Login() {
 
 
   return (
-    <div>
+    <div className="h-full border-2 rounded-3xl border-dotted border-gray-200 flex justify-center items-center" aria-hidden="true">
       <form onSubmit={handleSubmit} className='flex flex-col justify-around'>
         <div>
           <input type='email' name='email' autoComplete='email' placeholder='Email' className='font-medium text-white placeholder:text-white bg-transparent outline-none border-solid border-2 border-white rounded-xl px-2 py-1'/>
@@ -22,7 +30,7 @@ function Login() {
         <div className='flex justify-end my-2'>
           <Button type='submit' variant="outlined" className='material-button text-end'>{loading ? "Processing..." : "LogIn"}</Button>
         </div>
-        <p className='text-sm font-light text-blue-500 flex justify-end'>Sign Up for G-RIde?</p>
+        <button type='button' onClick={()=>handleDisplay()}><p className='text-sm font-light text-blue-500 flex justify-end'>Sign Up for G-RIde?</p></button>
       </form>
     </div>
   )
