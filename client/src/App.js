@@ -9,10 +9,11 @@ function App() {
 
   const [overlay, setOverlay] = useState(false)
   const [sign, setSign] = useState(false)
+  const [rides, setRides] = useState(false)
 
 
   return (
-    <Riders.Provider value={{setOverlay, overlay, setSign, sign}}>
+    <Riders.Provider value={{setOverlay, overlay, setSign, sign, rides, setRides}}>
       <div>
         <Helmet>
           <meta charSet="utf-8" />

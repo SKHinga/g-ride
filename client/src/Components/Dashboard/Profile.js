@@ -9,7 +9,7 @@ function Profile() {
           <div className='border-solid border-2 border-white/25 rounded-full w-32 h-32 overflow-hidden mr-1'>
             <img src="https://images.unsplash.com/photo-1605980776566-0486c3ac7617?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YmxhY2slMjBwZXJzb258ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Profile"/>
           </div>
-          <form className='border-solid border-2 border-white/25 rounded-lg p-1 mt-2 md:mt-0 md:w-4/6 h-1/2'>
+          <form className='border-solid border-2 border-white/25 rounded-lg p-1 mt-2 md:mt-0 md:w-4/6 h-1/2 overflow-x-hidden'>
             <input type='file' className='rounded-lg'/>
             <div className='flex justify-end mt-1'>
               <Button type='button' variant="outlined" className='material-button text-end !rounded-3xl !capitalize'>Save</Button>

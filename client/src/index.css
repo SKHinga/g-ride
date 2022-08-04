@@ -33,8 +33,14 @@ html {
   background-color: rgba(0, 0, 0, .5);
 }
 
-.noun {
-  height: 92%;
+.higher {
+  height: 91vh !important;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.higher::-webkit-scrollbar {
+  display: none;
 }
 
 .nairobi::after {
@@ -54,6 +60,10 @@ html {
   color: white !important;
 }
 
+.shade {
+  filter: drop-shadow(0 20px 13px rgba(63, 55, 153, 0.03));
+}
+
 @media screen and (min-width: 768px) {
   .nairobi {
     -webkit-transform: rotate(-90deg);
@@ -71,7 +81,17 @@ html {
     position: absolute;
   }
 
+  .noun {
+    height: 92%;
+  }
+
   .noun > h2 {
     margin-right: -60px;
+  }
+
+  .higher {
+    height: 90vh !important;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
