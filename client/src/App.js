@@ -23,8 +23,8 @@ function App() {
         </Helmet>
 
         <Routes>
-          <Route path="dashboard" element={<Dash/>}/>
-          <Route index path="/" element={<Landing/>}/>
+          <Route index path={'/'} element={<Landing/>}/>
+          <Route path={'dashboard'} element={<Dash/>}/>
         </Routes>
       </div>
     </Riders.Provider>
