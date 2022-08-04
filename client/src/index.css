@@ -64,6 +64,10 @@ html {
   box-shadow: 0 3px 7px 2px rgba(63, 55, 153, 0.3);
 }
 
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
 .nana {
   height: 92%;
 }

@@ -4,6 +4,8 @@ import {Helmet} from "react-helmet";
 import { Routes, Route} from "react-router-dom";
 import Dash from "./Components/Dashboard/Dash";
 import Landing from "./Components/Hero/Landing";
+import Display from "./Components/Dashboard/Display";
+import Lend from "./Components/Dashboard/Lend";
 
 function App() {
 
@@ -24,7 +26,10 @@ function App() {
 
         <Routes>
           <Route path={'/'} element={<Landing/>} exact/>
-          <Route path={'dashboard'} element={<Dash/>}/>
+          <Route path={'dashboard'} element={<Dash/>}>
+            <Route path={':id'} element={<Display/>}/>
+            <Route path={'hire-out'} element={<Lend/>}/>
+          </Route>
         </Routes>
       </div>
     </Riders.Provider>
