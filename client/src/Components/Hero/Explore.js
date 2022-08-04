@@ -17,7 +17,7 @@ function Explore() {
                 <p className='font-bold mt-5 text-base'>Ride your way to a healthy life</p>
               </div>
               <div>
-                <Link to='dashboard'><Button variant='contained' className='material-button'>EXPLORE MORE <ArrowForwardIcon/></Button></Link>
+                <Link to='/dashboard'><Button variant='contained' className='material-button'>EXPLORE MORE <ArrowForwardIcon/></Button></Link>
               </div>
             </div>
           </div>

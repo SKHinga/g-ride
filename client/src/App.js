@@ -23,7 +23,7 @@ function App() {
         </Helmet>
 
         <Routes>
-          <Route index path={'/'} element={<Landing/>}/>
+          <Route path={'/'} element={<Landing/>} exact/>
           <Route path={'dashboard'} element={<Dash/>}/>
         </Routes>
       </div>

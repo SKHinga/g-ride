@@ -40,25 +40,21 @@ export default function OverRide() {
                 <div className='rounded-3xl overflow-hidden'>
                   <img src="https://images.unsplash.com/photo-1512203492609-972c16baa28b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmljeWNsZSUyMHJhY2V8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" className='max-w-full max-h-full m-auto block rounded-3xl md:my-1' alt="Profile"/>
                 </div>
-                <div>
-                  <h3>Type:</h3>
-                  <p className='rounded-3xl px-2 py-1 shade border-solid border-2 w-1/5'>KSH. 1500</p>
+                <div className='flex justify-between mx-3 my-1'>
+                  <h3><span>Type:</span> Road Bike</h3>
+                  <p className='rounded-3xl px-2 py-1 shade sm:w-auto md:w-1/5'>KSH. 1500</p>
                 </div>
-                <div className="bg-black px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <h3 className='mx-3'>Description:</h3>
+                <p className='mx-3'>The lightweight frame makes this type of bicycle particularly good for numerous pavement uses</p>
+                <div className='m-3 flex justify-between'>
+                  <p className='font-bold text-lg'>From: <span className='italic text-base'>30-7</span></p>
+                  <p className='font-bold text-lg'>To: <span className='italic text-base'>10-8</span></p>
                   <button
                     type="button"
-                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
+                    className="w-1/3 inline-flex justify-center rounded-lg border border-transparent shadow-sm md:px-4 py-2 bg-indigo-700 text-base font-medium text-white hover:bg-indigo-500 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm"
                     onClick={() => setRides(false)}
                   >
-                    Deactivate
-                  </button>
-                  <button
-                    type="button"
-                    className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                    onClick={() => setRides(false)}
-                    ref={cancelButtonRef}
-                  >
-                    Cancel
+                    Hire
                   </button>
                 </div>
               </Dialog.Panel>
