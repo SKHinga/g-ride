@@ -10,7 +10,8 @@ function Dash() {
       {overlay?(<Overlay head={'Profile'} see={overlay} setSee={setOverlay}>
           <Profile/>
         </Overlay>):null}
-      <NavBar/>
+      <NavBar name={'Samuel'}/>
+      
     </div>
   )
 }

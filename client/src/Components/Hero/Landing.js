@@ -17,7 +17,7 @@ function Landing() {
         {sign?(<Overlay head={'Sign Up'} see={sign} setSee={setSign}>
           <Signup/>
         </Overlay>):null}
-        <NavBar/>
+        <NavBar name={'MY ACCOUNT'}/>
         <Explore/>
       </div>
   )

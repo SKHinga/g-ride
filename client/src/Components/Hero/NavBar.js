@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import PersonIcon from '@mui/icons-material/Person';
 import { Riders } from '../Helper/Context';
 
-function NavBar(over) {
+function NavBar({name}) {
 
   const {setOverlay, overlay} = useContext(Riders)
 
@@ -19,7 +19,7 @@ function NavBar(over) {
             <h1 className='font-bold text-xl'><span className='text-2xl rotation inline-block'>G</span> <span className='trans inline-block'>-RIDE</span></h1>
           </div>
           <div>
-            <button onClick={()=>handleOver()}><h2 className='font-medium'><PersonIcon/> <span className='inline-block account'>MY ACCOUNT</span></h2></button>
+            <button onClick={()=>handleOver()}><h2 className='font-medium'><PersonIcon/> <span className='inline-block account'>{name}</span></h2></button>
           </div>
         </div>
       </div>
