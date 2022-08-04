@@ -27,7 +27,7 @@ function App() {
         <Routes>
           <Route path={'/'} element={<Landing/>} exact/>
           <Route path={'dashboard'} element={<Dash/>}>
-            <Route path={':id'} element={<Display/>}/>
+            <Route path={''} element={<Display/>}/>
             <Route path={'hire-out'} element={<Lend/>}/>
           </Route>
         </Routes>

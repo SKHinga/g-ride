@@ -1,7 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
+import { Riders } from '../Helper/Context';
 
 function Profile() {
+  const {setOverlay, overlay} = useContext(Riders)
+
   return (
     <div className="h-full border-2 rounded-3xl border-dotted border-gray-200 p-2 overflow-hidden flex flex-col justify-between" aria-hidden="true">
       <div>
@@ -24,7 +28,7 @@ function Profile() {
         <p className='italic text-emerald-100'>30-7-2021</p>
         <div className='flex justify-around mt-3'>
           <Button type='button' variant="outlined" className='material-button text-end !rounded-3xl !capitalize'>My hires</Button>
-          <Button type='button' variant="outlined" className='material-button text-end !rounded-3xl !capitalize'>Hire out</Button>
+          <Link to='hire-out'><Button onClick={()=>setOverlay(!overlay)} type='button' variant="outlined" className='material-button text-end !rounded-3xl !capitalize'>Hire out</Button></Link>
         </div>
       </div>
       <div className='mt-4 flex align-end justify-end'>
