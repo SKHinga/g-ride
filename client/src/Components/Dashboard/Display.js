@@ -8,7 +8,7 @@ function Display() {
 
   useEffect(()=>{
     const collect = async() => {
-      const response = await fetch('/leads');
+      const response = await fetch('/lends');
       const bikes = await response.json();
       setLeads(bikes)
     }
