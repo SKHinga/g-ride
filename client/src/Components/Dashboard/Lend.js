@@ -7,7 +7,7 @@ import { Riders } from '../Helper/Context';
 
 function Lend() {
   const [image, setImage] = useState(null)
-  const [imgUrl, setImgUrl] = useState();
+  const [imgUrl, setImgUrl] = useState(null);
   const [progresspercent, setProgresspercent] = useState(0);
   const [error, setError] = useState([]);
   const {currentUser} = useContext(Riders);
@@ -51,11 +51,11 @@ function Lend() {
         });
       }
     );
-
   }
 
   const handleGone = e => {
     e.preventDefault();
+    if (!imgUrl) return alert("Please choose an image");
 
     fetch('/lends',{
       method: 'POST',
@@ -67,6 +67,8 @@ function Lend() {
     .then(res => {
       if(res.ok){
         res.json().then(thing => console.log(thing))
+        console.log(imgUrl);
+        alert('Upload successful!')
       } else {
         res.json().then(e => setError(Object.entries(e.error).flat()))
       }
@@ -93,8 +95,8 @@ function Lend() {
         </div>
       </div>
       <div className='mt-3'>
-        <input onChange={handleChange} value={lendData.bike_type} type='text' name='bike_type' placeholder='Type...' className='mr-2 font-normal text-white placeholder:text-white bg-transparent outline-none border-solid border-2 border-white/50 rounded-xl px-2 py-1'/>
-        <input onChange={handleChange} value={lendData.amount} type='number' name='amount' placeholder='Amount in Ksh...' className='mr-2 font-normal text-white placeholder:text-white bg-transparent outline-none border-solid border-2 border-white/50 rounded-xl px-2 py-1'/>
+        <input onChange={handleChange} value={lendData.bike_type} type='text' name='bike_type' placeholder='Type...' className='mr-2 font-normal text-white placeholder:text-white bg-transparent outline-none border-solid border-2 border-white/50 rounded-xl px-2 py-1 my-2 md:my-0'/>
+        <input onChange={handleChange} value={lendData.amount} type='number' name='amount' placeholder='Amount in Ksh...' min="250" max="5000" className='mr-2 font-normal text-white placeholder:text-white bg-transparent outline-none border-solid border-2 border-white/50 rounded-xl px-2 py-1'/>
       </div>
       <div className='mt-3 md:flex'>
         <div className='flex flex-col md:flex-row'>
@@ -108,7 +110,7 @@ function Lend() {
           </label>
         </div>
       </div>
-      <textarea cols='25' rows='6' name='description' placeholder='Description...' className='mt-2 font-normal text-white placeholder:text-white bg-transparent outline-none border-solid border-2 border-white/50 rounded-xl px-2 py-1'/>
+      <textarea cols='25' rows='6' name='description' value={lendData.description} onChange={handleChange}  placeholder='Description...' className='mt-2 font-normal text-white placeholder:text-white bg-transparent outline-none border-solid border-2 border-white/50 rounded-xl px-2 py-1'/>
       {error?.length > 0 && (
           <ul style={{ color: "red" }}>
             {error.map((error) => (
@@ -117,7 +119,7 @@ function Lend() {
           </ul>
         )}
       <div>
-        <Button onChange={handleChange} value={lendData.description} type='submit' variant="outlined" className='material-button text-end !rounded-3xl !capitalize'>Hire Out</Button>
+        <Button  type='submit' variant="outlined" className='material-button text-end !rounded-3xl !capitalize'>Hire Out</Button>
       </div>
     </form>
   )
