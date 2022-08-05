@@ -26,19 +26,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_05_050923) do
     t.string "description"
   end
 
-  create_table "listings", force: :cascade do |t|
-    t.string "user_id"
-    t.string "integer"
-    t.string "image_url"
-    t.string "type"
-    t.integer "amount"
-    t.date "from"
-    t.date "to"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
