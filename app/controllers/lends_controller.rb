@@ -25,6 +25,6 @@ class LendsController < ApplicationController
   end
 
   def lend_params
-    params.permit(:user_id, :bike_type, :from, :to, :image_url, :amount)
+    params.permit(:user_id, :bike_type, :from, :to, :image_url, :amount, :description)
   end
 end
