@@ -45,7 +45,7 @@ function Login() {
         res.json().then(e => setError(Object.entries(e.error).flat()))
       }
     })
-    // setLoading(false);
+    setLoading(false);
   }
 
   if(currentUser) return <Navigate to="dashboard" replace={true} />;
