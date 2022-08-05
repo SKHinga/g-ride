@@ -3,6 +3,11 @@ class LendsController < ApplicationController
   wrap_parameters format: []
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
+  def index
+    lend = Lend.all.order(id: :desc)
+    render json: lend, status: :ok
+  end
+
   def create
     lend = Lend.create(lend_params)
     render json: lend, status: :accepted
@@ -11,11 +16,6 @@ class LendsController < ApplicationController
   def show
     current_lend =  Lend.find(params[:id])
     render json: current_lend, status: :ok
-  end
-
-  def index
-    lend = Lend.all.order(id: :desc)
-    render json: lend, status: :ok
   end
 
 
