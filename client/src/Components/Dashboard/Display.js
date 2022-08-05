@@ -20,25 +20,25 @@ function Display() {
   return (
       <div className='grid grid-cols-1 md:grid-cols-4 gap-2'>
         <div onClick={()=>setRides(!rides)} className='border-solid border-2 border-white/25 h-48 rounded-2xl overflow-hidden mr-1'>
-        <img src='https://firebasestorage.googleapis.com/v0/b/upload-files-42f20.appspot.com/o/images%2Frobert-bye-tG36rvCeqng-unsplash.jpg080fc557-c6f3-4c78-8a59-8d02f9e4703a?alt=media&token=cfb26fe9-3e79-44af-9704-6c14a00f229b' key={obj.id} className='max-w-full max-h-full m-auto block' alt="Profile"/>
+        <img src='https://firebasestorage.googleapis.com/v0/b/upload-files-42f20.appspot.com/o/images%2Frobert-bye-tG36rvCeqng-unsplash.jpg080fc557-c6f3-4c78-8a59-8d02f9e4703a?alt=media&token=cfb26fe9-3e79-44af-9704-6c14a00f229b' className='max-w-full max-h-full m-auto block' alt="Profile"/>
         </div>
         <div onClick={()=>setRides(!rides)} className='border-solid border-2 border-white/25 h-48 rounded-2xl overflow-hidden mr-1'>
-        <img src='https://firebasestorage.googleapis.com/v0/b/upload-files-42f20.appspot.com/o/images%2Frobert-bye-tG36rvCeqng-unsplash.jpg080fc557-c6f3-4c78-8a59-8d02f9e4703a?alt=media&token=cfb26fe9-3e79-44af-9704-6c14a00f229b' key={obj.id} className='max-w-full max-h-full m-auto block' alt="Profile"/>
+        <img src='https://firebasestorage.googleapis.com/v0/b/upload-files-42f20.appspot.com/o/images%2Frobert-bye-tG36rvCeqng-unsplash.jpg080fc557-c6f3-4c78-8a59-8d02f9e4703a?alt=media&token=cfb26fe9-3e79-44af-9704-6c14a00f229b' className='max-w-full max-h-full m-auto block' alt="Profile"/>
         </div>
         <div onClick={()=>setRides(!rides)} className='border-solid border-2 border-white/25 h-48 rounded-2xl overflow-hidden mr-1'>
-        <img src='https://firebasestorage.googleapis.com/v0/b/upload-files-42f20.appspot.com/o/images%2Frobert-bye-tG36rvCeqng-unsplash.jpg080fc557-c6f3-4c78-8a59-8d02f9e4703a?alt=media&token=cfb26fe9-3e79-44af-9704-6c14a00f229b' key={obj.id} className='max-w-full max-h-full m-auto block' alt="Profile"/>
+        <img src='https://firebasestorage.googleapis.com/v0/b/upload-files-42f20.appspot.com/o/images%2Frobert-bye-tG36rvCeqng-unsplash.jpg080fc557-c6f3-4c78-8a59-8d02f9e4703a?alt=media&token=cfb26fe9-3e79-44af-9704-6c14a00f229b' className='max-w-full max-h-full m-auto block' alt="Profile"/>
         </div>
         <div onClick={()=>setRides(!rides)} className='border-solid border-2 border-white/25 h-48 rounded-2xl overflow-hidden mr-1'>
-        <img src='https://firebasestorage.googleapis.com/v0/b/upload-files-42f20.appspot.com/o/images%2Frobert-bye-tG36rvCeqng-unsplash.jpg080fc557-c6f3-4c78-8a59-8d02f9e4703a?alt=media&token=cfb26fe9-3e79-44af-9704-6c14a00f229b' key={obj.id} className='max-w-full max-h-full m-auto block' alt="Profile"/>
+        <img src='https://firebasestorage.googleapis.com/v0/b/upload-files-42f20.appspot.com/o/images%2Frobert-bye-tG36rvCeqng-unsplash.jpg080fc557-c6f3-4c78-8a59-8d02f9e4703a?alt=media&token=cfb26fe9-3e79-44af-9704-6c14a00f229b' className='max-w-full max-h-full m-auto block' alt="Profile"/>
         </div>
         <div onClick={()=>setRides(!rides)} className='border-solid border-2 border-white/25 h-48 rounded-2xl overflow-hidden mr-1'>
-        <img src='https://firebasestorage.googleapis.com/v0/b/upload-files-42f20.appspot.com/o/images%2Frobert-bye-tG36rvCeqng-unsplash.jpg080fc557-c6f3-4c78-8a59-8d02f9e4703a?alt=media&token=cfb26fe9-3e79-44af-9704-6c14a00f229b' key={obj.id} className='max-w-full max-h-full m-auto block' alt="Profile"/>
+        <img src='https://firebasestorage.googleapis.com/v0/b/upload-files-42f20.appspot.com/o/images%2Frobert-bye-tG36rvCeqng-unsplash.jpg080fc557-c6f3-4c78-8a59-8d02f9e4703a?alt=media&token=cfb26fe9-3e79-44af-9704-6c14a00f229b' className='max-w-full max-h-full m-auto block' alt="Profile"/>
         </div>
         <div onClick={()=>setRides(!rides)} className='border-solid border-2 border-white/25 h-48 rounded-2xl overflow-hidden mr-1'>
-        <img src='https://firebasestorage.googleapis.com/v0/b/upload-files-42f20.appspot.com/o/images%2Frobert-bye-tG36rvCeqng-unsplash.jpg080fc557-c6f3-4c78-8a59-8d02f9e4703a?alt=media&token=cfb26fe9-3e79-44af-9704-6c14a00f229b' key={obj.id} className='max-w-full max-h-full m-auto block' alt="Profile"/>
+        <img src='https://firebasestorage.googleapis.com/v0/b/upload-files-42f20.appspot.com/o/images%2Frobert-bye-tG36rvCeqng-unsplash.jpg080fc557-c6f3-4c78-8a59-8d02f9e4703a?alt=media&token=cfb26fe9-3e79-44af-9704-6c14a00f229b' className='max-w-full max-h-full m-auto block' alt="Profile"/>
         </div>
         <div onClick={()=>setRides(!rides)} className='border-solid border-2 border-white/25 h-48 rounded-2xl overflow-hidden mr-1'>
-        <img src='https://firebasestorage.googleapis.com/v0/b/upload-files-42f20.appspot.com/o/images%2Frobert-bye-tG36rvCeqng-unsplash.jpg080fc557-c6f3-4c78-8a59-8d02f9e4703a?alt=media&token=cfb26fe9-3e79-44af-9704-6c14a00f229b' key={obj.id} className='max-w-full max-h-full m-auto block' alt="Profile"/>
+        <img src='https://firebasestorage.googleapis.com/v0/b/upload-files-42f20.appspot.com/o/images%2Frobert-bye-tG36rvCeqng-unsplash.jpg080fc557-c6f3-4c78-8a59-8d02f9e4703a?alt=media&token=cfb26fe9-3e79-44af-9704-6c14a00f229b' className='max-w-full max-h-full m-auto block' alt="Profile"/>
         </div>
         {seen}
         
