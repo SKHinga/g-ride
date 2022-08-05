@@ -94,7 +94,7 @@ function Lend() {
       </div>
       <div className='mt-3'>
         <input onChange={handleChange} value={lendData.bike_type} type='text' name='bike_type' placeholder='Type...' className='mr-2 font-normal text-white placeholder:text-white bg-transparent outline-none border-solid border-2 border-white/50 rounded-xl px-2 py-1'/>
-        <input onChange={handleChange} value={lendData.amount} type='number' placeholder='Amount In Ksh.' className='mt-3 mr-2 font-normal text-white placeholder:text-white bg-transparent outline-none border-solid border-2 border-white/50 rounded-xl px-2 py-1'/>
+        <input onChange={handleChange} value={lendData.amount} type='number' name='amount' placeholder='Amount in Ksh...' className='mr-2 font-normal text-white placeholder:text-white bg-transparent outline-none border-solid border-2 border-white/50 rounded-xl px-2 py-1'/>
       </div>
       <div className='mt-3 md:flex'>
         <div className='flex flex-col md:flex-row'>
