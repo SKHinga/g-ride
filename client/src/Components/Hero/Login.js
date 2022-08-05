@@ -46,7 +46,6 @@ function Login() {
       }
     })
     // setLoading(false);
-    setOverlay(!overlay);
   }
 
   if(currentUser) return <Navigate to="dashboard" replace={true} />;
