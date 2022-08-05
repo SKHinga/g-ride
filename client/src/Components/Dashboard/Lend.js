@@ -1,15 +1,60 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Button from '@mui/material/Button';
+import {storage} from '../firebase';
+import {getDownloadURL, ref, uploadBytesResumable} from 'firebase/storage';
+import {v4} from 'uuid'
 
 function Lend() {
+  const [image, setImage] = useState(null)
+  const [imgUrl, setImgUrl] = useState(null);
+  const [progresspercent, setProgresspercent] = useState(0);
+
+  const uploadImage = () => {
+    if (image == null) return;
+    const imageRef = ref(storage, `images/${image.name + v4()}`);
+    const uploadTask = uploadBytesResumable(imageRef, image)
+
+    uploadTask.on(
+      'state_changed',
+      (snapshot) => {
+        const progress = Math.round(
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        );
+        setProgresspercent(progress);
+      },
+      (error) => {
+        alert(error);
+      },
+      () => {
+        getDownloadURL(uploadTask.snapshot.ref).then(downloadURL => {
+          setImgUrl(downloadURL);
+        });
+      }
+    );
+
+  }
+
+  const handleGone = e => {
+    e.preventDefault();
+  
+  }
+
   return (
-    <form className='admit'>
+    <form onSubmit={handleGone} className='admit'>
+      {progresspercent > 0 && progresspercent < 100 ? (
+          <span className="text-red-600">
+            {`Uploading... ${progresspercent}%`}
+          </span>
+        ) : progresspercent === 100 ? (
+          <span className="text-green-600">Upload complete</span>
+        ) : null}
       <div className='flex flex-col md:flex-row'>
         <div className='border-solid border-2 border-white/25 rounded-3xl w-58 h-52 overflow-hidden mr-1'>
-          <img src="https://images.unsplash.com/photo-1512203492609-972c16baa28b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmljeWNsZSUyMHJhY2V8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" className='max-w-full max-h-full m-auto block' alt="Profile"/>
+          <img src={imgUrl} alt="Your Upload Will Appear Here!"/>
         </div>
-        <div className='border-solid border-2 border-white/50 rounded-lg p-1 mt-2 md:mt-0 md:w-4/6 h-1/2 overflow-x-hidden'>
-          <input type='file' className='rounded-lg'/>  
+        <div className='flex border-solid border-2 border-white/50 rounded-lg p-1 mt-2 md:mt-0 md:w-4/6 h-1/2 overflow-x-hidden'>
+          <input type='file' onChange={e=>{setImage(e.target.files[0])}} className='rounded-lg'/>
+          <Button onClick={()=>uploadImage()} type='button' variant="outlined" className='material-button text-end !rounded-xl !capitalize'>Set</Button> 
         </div>
       </div>
       <div className='mt-3'>

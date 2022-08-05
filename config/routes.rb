@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :lends, only: [:index, :show, :create]
   resources :users, only: [:show, :create]
 
 
