@@ -1,10 +1,18 @@
 import React, {useContext} from 'react'
 import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Riders } from '../Helper/Context';
 
 function Profile() {
-  const {setOverlay, overlay} = useContext(Riders)
+  const {setOverlay, overlay, currentUser, setCurrentUser} = useContext(Riders)
+  const navigate = useNavigate()
+
+  const handleLogOut = () => {
+    fetch('/logout', {
+      method: 'DELETE',
+    }).then(()=> setCurrentUser(''))
+    navigate("../", { replace: true });
+  }
 
   return (
     <div className="h-full border-2 rounded-3xl border-dotted border-gray-200 p-2 overflow-hidden flex flex-col justify-between" aria-hidden="true">
@@ -21,9 +29,9 @@ function Profile() {
           </form>
         </div>
         <h3 className='font-bold text-lg mt-2'>Name:</h3>
-        <p className='italic'>Samuel Hinga</p>
+        <p className='italic'>{currentUser.first_name} {currentUser.last_name}</p>
         <h3 className='font-bold text-lg mt-2'>Email:</h3>
-        <p className='italic'>samuelkinuthia700@gmail.com</p>
+        <p className='italic'>{currentUser.email}</p>
         <h3 className='font-bold text-lg mt-2'>Current Deadline:</h3>
         <p className='italic text-emerald-100'>30-7-2021</p>
         <div className='flex justify-around mt-3'>
@@ -32,7 +40,7 @@ function Profile() {
         </div>
       </div>
       <div className='mt-4 flex align-end justify-end'>
-        <Button type='button' variant="outlined" className='material-button text-end !rounded-3xl !capitalize'>Log Out</Button>
+        <Button onClick={handleLogOut} type='button' variant="outlined" className='material-button text-end !rounded-3xl !capitalize'>Log Out</Button>
       </div>
     </div>
   )

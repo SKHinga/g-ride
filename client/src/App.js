@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Riders } from "./Components/Helper/Context";
 import {Helmet} from "react-helmet";
 import { Routes, Route} from "react-router-dom";
@@ -12,10 +12,21 @@ function App() {
   const [overlay, setOverlay] = useState(false)
   const [sign, setSign] = useState(false)
   const [rides, setRides] = useState(false)
+  const [currentUser, setCurrentUser] = useState('')
 
+  useEffect(()=>{
+    fetch('/auth')
+    .then(res => {
+      if(res.ok){
+        res.json().then(user => setCurrentUser(user));
+      }
+    });
+  }, []);
 
+  // if(!currentUser) return </>;
+  
   return (
-    <Riders.Provider value={{setOverlay, overlay, setSign, sign, rides, setRides}}>
+    <Riders.Provider value={{setOverlay, overlay, setSign, sign, rides, setRides, currentUser, setCurrentUser}}>
       <div>
         <Helmet>
           <meta charSet="utf-8" />

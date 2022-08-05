@@ -6,7 +6,7 @@ import Profile from './Profile';
 import { Outlet } from 'react-router-dom';
 import OverRide from './OverRide';
 function Dash() {
-  const {setOverlay, overlay, rides} = useContext(Riders)
+  const {setOverlay, overlay, rides, currentUser} = useContext(Riders)
   
 
   return (
@@ -17,7 +17,7 @@ function Dash() {
 
       {rides?(<OverRide/>):null}
 
-      <NavBar name={'Samuel'}/>
+      <NavBar name={currentUser.first_name}/>
       <div className='grid grid-cols-10 md:grid-cols-12 noun px-3'>
         <div className='hidden md:contents'><div></div></div>
         <div className='col-span-10 w-full flex flex-col md:flex-row justify-between'>

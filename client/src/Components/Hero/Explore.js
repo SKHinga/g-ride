@@ -1,9 +1,15 @@
-import React from 'react'
-import { Link} from 'react-router-dom';
+import React, {useContext} from 'react'
 import Button from '@mui/material/Button';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { Riders } from '../Helper/Context';
 
 function Explore() {
+  const {setOverlay, overlay} = useContext(Riders)
+
+  const handOver = () => {
+    setOverlay(!overlay)
+  }
+
   return (
     <div className='grid grid-cols-10 md:grid-cols-12 nana px-3'>
       <div className='hidden md:contents'><div></div></div>
@@ -17,7 +23,7 @@ function Explore() {
                 <p className='font-bold mt-5 text-base'>Ride your way to a healthy life</p>
               </div>
               <div>
-                <Link to='/dashboard'><Button variant='contained' className='material-button'>EXPLORE MORE <ArrowForwardIcon/></Button></Link>
+                <Button onClick={()=>handOver()} variant='contained' className='material-button'>EXPLORE MORE <ArrowForwardIcon/></Button>
               </div>
             </div>
           </div>
