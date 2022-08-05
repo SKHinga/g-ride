@@ -1,4 +1,5 @@
 class LendsController < ApplicationController
+  skip_before_action :authorized, only: :index
   wrap_parameters format: []
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
