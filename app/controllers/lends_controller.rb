@@ -1,10 +1,10 @@
 class LendsController < ApplicationController
-  skip_before_action :authorized, only: :index, :create, :show
+  skip_before_action :authorized, only: [:index, :create, :show]
   wrap_parameters format: []
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
   def index
-    lend = Lend.all.order(id: :desc)
+    lend = Lend.all
     render json: lend, status: :ok
   end
 
