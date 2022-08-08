@@ -1,9 +1,11 @@
+import { Navigate } from 'react-router-dom';
 import React, {useContext} from 'react'
+
 import { Riders } from '../Helper/Context';
 
 function Display() {
 
-  const {rides, setRides} = useContext(Riders)
+  const {rides, setRides, currentUser} = useContext(Riders)
   // const [lends, setLends] = useState()
 
   // useEffect(()=>{
@@ -16,6 +18,8 @@ function Display() {
   // }, [])
 
   // const seen = lends?.map(obj => <img src={obj.image_url} key={obj.id} className='max-w-full max-h-full m-auto block' alt="Profile"/>)
+
+  if(!currentUser) return <Navigate to="/" replace={true} />;
 
   return (
       <div className='grid grid-cols-1 md:grid-cols-4 gap-2'>
