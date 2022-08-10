@@ -53,11 +53,11 @@ export default function OverRide() {
                   <img src={newItem.image_url} className='max-w-full max-h-full m-auto block rounded-3xl md:my-1' alt="Profile"/>
                 </div>
                 <div className='flex justify-between mx-3 my-1'>
-                  <h3><span>Type:</span> {newItem.bike_type}</h3>
+                  <h3><span className='font-bold'>Type:</span> {newItem.bike_type}</h3>
                   <p className='rounded-3xl px-2 py-1 shade sm:w-auto md:w-1/5'>KSH. {newItem.amount}</p>
                 </div>
-                <h3 className='mx-3'>Description:</h3>
-                <p className='mx-3'>{newItem.description}</p>
+                <h3 className='mx-3 font-bold'>Description:</h3>
+                <p className='mx-3 italic'>{newItem.description}</p>
                 <div className='m-3 flex justify-between'>
                   <p className='font-bold text-lg'>From: <span className='italic text-base'>{newItem.from}</span></p>
                   <p className='font-bold text-lg'>To: <span className='italic text-base'>{newItem.to}</span></p>
