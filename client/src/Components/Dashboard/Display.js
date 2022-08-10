@@ -19,7 +19,7 @@ function Display() {
 
   // const seen = lends?.map(obj => <img src={obj.image_url} key={obj.id} className='max-w-full max-h-full m-auto block' alt="Profile"/>)
 
-  if(!currentUser) return <Navigate to="/" replace={true} />;
+  if(!currentUser) return <Navigate to="../" replace={true} />;
 
   return (
       <div className='grid grid-cols-1 md:grid-cols-4 gap-2'>
