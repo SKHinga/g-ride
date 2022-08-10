@@ -12,6 +12,7 @@ function App() {
   const [overlay, setOverlay] = useState(false)
   const [sign, setSign] = useState(false)
   const [rides, setRides] = useState(false)
+  const [single, setSingle] = useState()
   const [currentUser, setCurrentUser] = useState('')
 
   useEffect(()=>{
@@ -26,7 +27,7 @@ function App() {
   // if(!currentUser) return </>;
   
   return (
-    <Riders.Provider value={{setOverlay, overlay, setSign, sign, rides, setRides, currentUser, setCurrentUser}}>
+    <Riders.Provider value={{setOverlay, overlay, setSign, sign, rides, setRides, currentUser, setCurrentUser, single, setSingle}}>
       <div>
         <Helmet>
           <meta charSet="utf-8" />

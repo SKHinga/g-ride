@@ -73,6 +73,16 @@ function Lend() {
         res.json().then(e => setError(Object.entries(e.error).flat()))
       }
     })
+
+    setLendData({
+      user_id : currentUser.id,
+      bike_type : "",
+      from : "",
+      to : "",
+      image_url : imgUrl,
+      amount : "",
+      description : ""
+    })
   
   }
 
@@ -83,7 +93,7 @@ function Lend() {
             {`Uploading... ${progresspercent}%`}
           </span>
         ) : progresspercent === 100 ? (
-          <span className="text-green-600">Upload complete</span>
+          <span className="text-green-600 text-2xl">Upload complete</span>
         ) : null}
       <div className='flex flex-col md:flex-row'>
         <div className='border-solid border-2 border-white/25 rounded-3xl w-52 h-58 overflow-hidden mr-1'>
