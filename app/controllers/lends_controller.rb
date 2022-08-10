@@ -4,7 +4,7 @@ class LendsController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
   def index
-    lend = Lend.order(rating: :desc)
+    lend = Lend.all.order(id: :desc)
     render json: lend, status: :ok
   end
 
