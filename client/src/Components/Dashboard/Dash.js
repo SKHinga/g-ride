@@ -8,7 +8,7 @@ import OverRide from './OverRide';
 function Dash() {
   const {setOverlay, overlay, rides, currentUser} = useContext(Riders)
 
-  if(!currentUser) return <Navigate to="/" replace={true} />;
+  if(!currentUser) return <Navigate to="../" replace={true} />;
   
 
   return (
