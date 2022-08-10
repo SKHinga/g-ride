@@ -3,7 +3,7 @@ import NavBar from '../Hero/NavBar'
 import { Riders } from '../Helper/Context';
 import Overlay from '../Hero/Overlay'
 import Profile from './Profile';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Navigate } from 'react-router-dom';
 import OverRide from './OverRide';
 function Dash() {
   const {setOverlay, overlay, rides, currentUser} = useContext(Riders)
